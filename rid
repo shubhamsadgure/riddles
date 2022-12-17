@@ -1,14 +1,7 @@
-
+class a{
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.google.com/");
 		driver.findElement(By.name("q")).sendKeys("Avengers");
-		List<WebElement> allsugestion = driver.findElements(By.xpath("//li[@role='presentation' and not (@id='YMXe')]"));
-		for(WebElement ele:allsugestion) {
-			System.out.println(ele.getText());
-		}	
-		
-		int ple = allsugestion.size();
-		System.out.println(ple);
-		
+	}	
